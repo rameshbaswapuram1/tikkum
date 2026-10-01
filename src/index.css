@@ -1,0 +1,124 @@
+:root {
+  --paper: #fbf9f3;
+  --ink: #25291f;
+  --forest: #314633;
+  --tomato: #bd5c43;
+  --line: #e7e3d8;
+  --sans: "DM Sans", "Segoe UI", sans-serif;
+  --serif: "Fraunces", Georgia, serif;
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  min-width: 0;
+  min-height: 100vh;
+  margin: 0;
+}
+button,
+input {
+  font: inherit;
+}
+a {
+  color: inherit;
+}
+#root {
+  min-height: 100vh;
+}
+
+.live-order-strip {
+  display: grid;
+  grid-template-columns: 34px minmax(180px, 1fr) auto 24px;
+  align-items: center;
+  gap: 12px;
+  width: min(1240px, calc(100% - 64px));
+  min-height: 65px;
+  margin: 0 auto;
+  padding: 9px 13px;
+  border-bottom: 1px solid #e7e3d8;
+  background: #f5f6ec;
+}
+.live-order-icon {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  color: #f8f5ec;
+  background: #314633;
+}
+.live-order-icon svg {
+  font-size: 17px;
+}
+.live-order-copy {
+  display: grid;
+  gap: 4px;
+}
+.live-order-copy span {
+  color: #7b826f;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+.live-order-copy strong {
+  color: #354333;
+  font-family: var(--serif);
+  font-size: 14px;
+  font-weight: 600;
+}
+.live-order-route {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #777e6f;
+  font-size: 9px;
+}
+.live-order-route i {
+  width: 21px;
+  height: 1px;
+  background: #c7cdbd;
+}
+.live-order-route strong {
+  color: #3e5b3c;
+  font-size: 10px;
+}
+.tracking-close {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border: 0;
+  color: #757a6f;
+  background: transparent;
+  cursor: pointer;
+}
+.tracking-close svg {
+  font-size: 16px;
+}
+
+@media (max-width: 640px) {
+  .live-order-strip {
+    grid-template-columns: 30px 1fr 24px;
+    gap: 8px;
+    width: calc(100% - 32px);
+    padding: 9px 0;
+  }
+  .live-order-icon {
+    width: 28px;
+    height: 28px;
+  }
+  .live-order-copy strong {
+    font-size: 12px;
+  }
+  .live-order-route {
+    display: none;
+  }
+}

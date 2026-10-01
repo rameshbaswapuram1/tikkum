@@ -1,0 +1,143 @@
+.workspace-switcher {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 66px;
+  padding: 0 max(32px, calc((100% - 1320px) / 2));
+  border-bottom: 1px solid #e7e5dc;
+  color: #28392b;
+  background: #fffefa;
+}
+.suite-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #314633;
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.suite-brand-mark {
+  display: grid;
+  width: 27px;
+  height: 27px;
+  place-items: center;
+  border-radius: 50% 50% 50% 7px;
+  color: #fbf9f3;
+  background: #bd5c43;
+  font-family: var(--sans);
+  font-size: 18px;
+}
+.suite-brand-dot {
+  color: #bd5c43;
+}
+.switcher-label {
+  flex: 0 0 auto;
+  padding-left: 23px;
+  border-left: 1px solid #e7e5dc;
+  color: #898879;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.workspace-tabs {
+  flex: 1;
+  min-width: 0;
+}
+.workspace-tabs .MuiTabs-flexContainer {
+  gap: 4px;
+}
+.workspace-tabs .MuiTab-root {
+  min-width: auto;
+  min-height: 65px;
+  padding: 0 12px;
+  color: #7e7d72;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: none;
+}
+.workspace-tabs .MuiTab-root.Mui-selected {
+  color: #314633;
+}
+.workspace-tabs .MuiTab-iconWrapper {
+  margin-right: 6px;
+  font-size: 17px;
+}
+.workspace-tabs .MuiTabs-indicator {
+  height: 2px;
+  background: #bd5c43;
+}
+.workspace-tabs .MuiTabs-scrollButtons {
+  color: #314633;
+}
+.preview-badge {
+  flex: 0 0 auto;
+  padding: 6px 8px;
+  border: 1px solid #e8e4d8;
+  color: #8b8676;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+@media (max-width: 850px) {
+  .workspace-switcher {
+    gap: 12px;
+    padding: 0 18px;
+  }
+  .switcher-label,
+  .preview-badge {
+    display: none;
+  }
+  .workspace-tabs .MuiTab-root {
+    padding: 0 10px;
+    font-size: 10px;
+  }
+}
+@media (max-width: 520px) {
+  .workspace-switcher {
+    min-height: 58px;
+    gap: 10px;
+    padding: 0 12px;
+  }
+  .suite-brand {
+    gap: 5px;
+    font-size: 17px;
+  }
+  .suite-brand-mark {
+    width: 23px;
+    height: 23px;
+    font-size: 15px;
+  }
+  .workspace-tabs .MuiTab-root {
+    min-height: 57px;
+    padding: 0 8px;
+    font-size: 9px;
+  }
+  .workspace-tabs .MuiTab-iconWrapper {
+    margin-right: 4px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 360px) {
+  .workspace-switcher {
+    gap: 6px;
+    padding: 0 8px;
+  }
+  .suite-brand {
+    gap: 4px;
+    font-size: 15px;
+  }
+  .suite-brand-mark {
+    width: 21px;
+    height: 21px;
+    font-size: 14px;
+  }
+  .workspace-tabs .MuiTab-root {
+    padding: 0 6px;
+    font-size: 8px;
+  }
+}
